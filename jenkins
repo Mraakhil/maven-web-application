@@ -10,8 +10,8 @@ stage('UploadArtifcats IntoNexus'){
 sh "$mavenhome/bin/mvn deploy"}
 
 stage('DeployAppIntoTomcat'){
-sshagent(['57c03963-5aa2-43ac-b458-416a8855b127']){
-	sh "scp -o StrictHostkeyChecking=no target/maven-web-application.war ec2-user@3.108.215.224:8080/opt/apache-tomcat-9.0.100/webapps"
+sshagent(['57c03963-5aa2-43ac-b458-416a8855b127']) {
+	sh "scp -o StrictHostkeyChecking=no target/maven-web-application.war ec2-user@13.201.104.70:8080/opt/apache-tomcat-9.0.100/webapps"
 }
 }
 
