@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Administrator</name>
-	      <url>http://13.232.121.153:8081/repository/aaaaa-r/</url>
+	      <url>http://52.66.213.253:8081/repository/aaaaa-r/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Administrator</name>
-	      <url>http://13.232.121.153:8081/repository/aaaa-s/</url>
+	      <url>http://52.66.213.253:8081/repository/aaaa-s/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
