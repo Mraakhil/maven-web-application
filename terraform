@@ -1,0 +1,34 @@
+pipline{
+  agent any
+  environment{provider "aws" {
+  region = "ap-south-1"
+  access_key = "AKIAVVZOOI3AAESZMIXI"
+  secret_key = "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"
+resource "aws_instance" "AWSServer" {
+  ami = "ami-02ddb77f8f93ca4ca"
+  instance_type = "t2.micro"
+  key_name = "newAccount"
+  security_groups = ["launch-wizard-2"]
+  tags = {
+   Name = "Terrafrom Server"
+  }
+}
+}
+}
+
+stages{stage('checkout code'){steps{git branch:'development', url:'https://github.com/Mraakhil/maven-web-application.git'}}
+       stage ('terraform init'){steps{sh 'trerraform init'}}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
